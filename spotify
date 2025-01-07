@@ -1,0 +1,192 @@
+// html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="spotify1.css">
+</head>
+<body>
+    <!-- Main container holding the sidebar and main content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>Spotify</h1>
+            <ul>
+                <li>Home</li>
+                <li>Search</li>
+                <li>Your Library</li>
+            </ul>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <h2>Discover Weekly</h2>
+            <div class="playlist">
+                <!-- Song cards -->
+                <div class="song">
+                    <img src="card1img.jpeg" alt="Global Top 50">
+                    <p>Global Top 50</p>
+                </div>
+                <div class="song">
+                    <img src="card2img.jpeg" alt="Mahiye Jinna Sona">
+                    <p>Mahiye Jinna Sona</p>
+                </div>
+                <div class="song">
+                    <img src="card3img.jpeg" alt="Mere Pass Tum Ho">
+                    <p>Mere Pass Tum Ho</p>
+                </div>
+                <div class="song">
+                    <img src="card4img.jpeg" alt="Naa Ready">
+                    <p>Naa Ready</p>
+                </div>
+                <div class="song">
+                    <img src="card5img.jpeg" alt="Top GLobal">
+                    <p>Top GLobal</p>
+                </div>
+                <div class="song">
+                    <img src="card6img.jpeg" alt="Top India">
+                    <p>Top India</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="song-info">Currently Playing: Shape of You</div>
+        <div class="controls">
+            <button>Prev</button>
+            <button>Play</button>
+            <button>Next</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+  // css
+
+  /* Resetting margins and paddings for all elements */
+* {
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Ensures padding and borders don't affect element size */
+}
+
+/* Styling the body */
+body {
+    font-family: Arial, sans-serif; /* Sets a clean, modern font */
+    display: flex; /* Enables flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    height: 100vh; /* Sets the height to the full viewport */
+    background: #121212; /* Dark background for a Spotify-like appearance */
+    color: #fff; /* White text for contrast */
+}
+
+/* Main container layout */
+.container {
+    display: flex; /* Enables flexbox for horizontal layout */
+    flex: 1; /* Ensures the container takes all remaining height */
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 20%; /* Sidebar occupies 20% of the container width */
+    background: #000; /* Black background for the sidebar */
+    padding: 20px; /* Adds inner spacing around content */
+}
+
+.sidebar h1 {
+    font-size: 24px; /* Sets a large font size for the title */
+    margin-bottom: 20px; /* Adds space below the title */
+}
+
+.sidebar ul {
+    list-style: none; /* Removes bullets from the list */
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Adds vertical spacing between menu items */
+    font-size: 18px; /* Sets font size for menu items */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.sidebar ul li:hover {
+    color: #1db954; /* Changes text color to Spotify green on hover */
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1; /* Takes the remaining width of the container */
+    padding: 20px; /* Adds inner spacing */
+}
+
+.main-content h2 {
+    margin-bottom: 20px; /* Adds space below the heading */
+    font-size: 28px; /* Sets font size for the heading */
+}
+
+/* Playlist styles */
+.playlist {
+    display: flex; /* Enables flexbox for the playlist layout */
+    flex-wrap: wrap; /* Wraps items to the next line if needed */
+    gap: 20px; /* Adds space between items */
+}
+
+.playlist .song {
+    background: #282828; /* Dark gray background for song cards */
+    padding: 15px; /* Adds inner spacing */
+    border-radius: 8px; /* Rounds the corners of the card */
+    width: calc(33.333% - 30px); /* Makes each card take one-third of the width, minus the gap */
+    text-align: center; /* Centers text inside the card */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background 0.3s ease; /* Smoothly transitions the background color on hover */
+}
+
+.playlist .song img {
+    width: 100%; /* Makes the image responsive to the card's width */
+    border-radius: 8px; /* Rounds the corners of the image */
+}
+
+.playlist .song p {
+    margin-top: 10px; /* Adds space above the song name */
+}
+
+.playlist .song:hover {
+    background: #1db954; /* Changes background to Spotify green on hover */
+}
+
+/* Footer styles */
+.footer {
+    height: 60px; /* Sets a fixed height for the footer */
+    background: #282828; /* Dark gray background for the footer */
+    display: flex; /* Enables flexbox for layout */
+    align-items: center; /* Vertically centers content */
+    justify-content: space-between; /* Positions items at the edges */
+    padding: 0 20px; /* Adds horizontal padding */
+}
+
+.footer .controls {
+    display: flex; /* Enables flexbox for control buttons */
+    gap: 10px; /* Adds space between buttons */
+}
+
+.footer button {
+    background: none; /* Removes default button background */
+    border: none; /* Removes default button borders */
+    color: #fff; /* Sets button text color to white */
+    font-size: 16px; /* Sets font size for the buttons */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: color 0.3s ease; /* Smoothly transitions text color on hover */
+}
+
+.footer button:hover {
+    color: #1db954; /* Changes button text color to Spotify green on hover */
+}
+
+.footer .song-info {
+    font-size: 14px; /* Sets smaller text for the currently playing song */
+}
